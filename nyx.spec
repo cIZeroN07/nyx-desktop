@@ -1,13 +1,17 @@
 # Empaquetado de Nyx con PyInstaller.
 # Construir:  .venv\Scripts\pyinstaller.exe nyx.spec --noconfirm
+import os
 from pathlib import Path
 
 from PyInstaller.utils.hooks import collect_data_files, collect_dynamic_libs
 
 sprites = [(str(p), "assets/sprites") for p in Path("assets/sprites").glob("*.png") if not p.stem.endswith("_src")]
 
+# NYX_PUBLIC=1: versión para publicar (GitHub Releases), sin la apariencia de Capri
+public = os.environ.get("NYX_PUBLIC") == "1"
 skins = [(str(p), str(p.parent).replace("\\", "/")) for p in Path("assets/skins").rglob("*")
-         if p.is_file() and p.suffix in (".png", ".json", ".md", ".txt")]
+         if p.is_file() and p.suffix in (".png", ".json", ".md", ".txt")
+         and not (public and "capri" in p.parts)]
 fonts = [(str(p), "assets/fonts") for p in Path("assets/fonts").glob("*")]
 
 datas = sprites + skins + fonts + [
