@@ -1,0 +1,18 @@
+# Entorno y compilados
+.venv/
+__pycache__/
+*.pyc
+build/
+dist/
+
+# Datos personales (la memoria real vive en %APPDATA%\Nyx, pero por si acaso)
+memory/
+voice_samples/
+*.log
+
+# Apariencias de terceros: no se publican (Capri es de Cyberpunk: Edgerunners / capri-desktop)
+assets/skins/capri/
+assets/source/skin_glitch_sheet.png
+
+# Restos de recortes intermedios
+assets/sprites/*_src.png

@@ -1,0 +1,13 @@
+Nyx - compañera de escritorio (cIZeroN). Uso no comercial.
+
+Partes basadas en capri-desktop (https://github.com/lachydotmcg/capri-desktop):
+  - La interfaz de terminal (talk_ui.py): pastilla, bocadillo y caja de texto, reescritas en Python.
+  - El teletransporte con rayo (effects.py) y la ventana de ajustes Mainframe (mainframe.py).
+  - La apariencia animada "Capri" (assets/skins/capri). Solo va en el instalador, no en este repositorio.
+Licencia: PolyForm Noncommercial License 1.0.0
+  https://polyformproject.org/licenses/noncommercial/1.0.0
+Required Notice: Copyright 2026 Lachy (https://github.com/lachydotmcg)
+
+Capri es un personaje de Cyberpunk: Edgerunners (CD PROJEKT RED / Studio Trigger).
+
+Tipo de letra Share Tech Mono: SIL Open Font License (assets/fonts/OFL.txt).
